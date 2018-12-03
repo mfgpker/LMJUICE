@@ -1,0 +1,46 @@
+<div fxLayoutAlign="center">
+  <mat-card>
+
+
+    <div class="form-container">
+
+      <div class="error">{{error?.error}}</div>
+
+      <div>
+        We have a XSS issue and you need to fix it.
+        The function you need to fix is validateInput. The function need to validate the input and return a safe input .
+        <br>
+        The requirement:<br>
+          1. The function must named validateInput<br>
+          2. It must return a XSS free input<br>
+          <br>
+        We will test the new better function with some known xss tricks.
+
+
+      </div>
+
+      <mat-form-field>
+        <mat-label>validator</mat-label>
+        <textarea rows="4" cols="50" id="code" name="code"
+          [formControl]="CodeControl"
+          (focus)="this.error=null"
+          matInput placeholder= "function validateInput(input) { return (input); }"
+           matInput value= "function validateInput(input) { <br>  return (input); } ">
+          </textarea>
+        <mat-error *ngIf="CodeControl.invalid" >Please provide a password</mat-error>
+      </mat-form-field>
+
+
+      <div class="button-container">
+        <button id="loginButton" [disabled]="!CodeControl.value" mat-raised-button
+                color="primary" (click)="submit()"><i class="fas fa-key fa-lg"></i> Submit
+        </button>
+
+      </div>
+
+
+    </div>
+
+
+  </mat-card>
+</div>

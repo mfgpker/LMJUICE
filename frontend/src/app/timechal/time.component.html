@@ -1,0 +1,37 @@
+<div fxLayoutAlign="center">
+  <mat-card>
+
+
+
+
+    <div class="form-container">
+
+      <div class="error">{{error?.error}}</div>
+
+      <div>
+        secret TIME CHALLA
+      </div>
+
+      <mat-form-field>
+        <mat-label>Secret input</mat-label>
+        <input id="geuss" #email name="geuss"
+               [formControl]="GeussControl"
+               (focus)="this.error=null"
+               matInput placeholder="">
+        <mat-error *ngIf="GeussControl.invalid" >Please provide a password</mat-error>
+      </mat-form-field>
+
+
+      <div class="button-container">
+        <button id="loginButton" [disabled]="!GeussControl.value" mat-raised-button
+                color="primary" (click)="Geuss()"><i class="fas fa-key fa-lg"></i> Submit
+        </button>
+
+      </div>
+
+
+    </div>
+
+
+  </mat-card>
+</div>
