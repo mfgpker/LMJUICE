@@ -11,35 +11,21 @@ module.exports = function TimeCheck () {
     let password = "apple";
     let userGeuss = req.body.input;
 
-
-
     if (userGeuss == undefined) {
       console.log(userGeuss)
       res.status(401).send('Invalid Geuss.')
     }
     else {
-
-
     let lenpass = password.length;
     let lengeuss = userGeuss.length;
-
-
-//    console.log("p: ("+lenpass+"), g: ("+lengeuss+") = dif = " + (lenpass - lengeuss))
-
-
-
     var startFrom = new Date().getTime();
 
     let count = 0;
     let result = true;
     for (let i = 0; i < lenpass; i++) {
-      if (true == true) {
 
         let p = password[i];
         let g = userGeuss[i];
-
-
-
         //console.log(p + ", " + g)
         if (p === g && result == true) {
           //console.log(p + " == " + g)
@@ -48,10 +34,7 @@ module.exports = function TimeCheck () {
           result = false
           sleep(1000);
         }
-      }
-      else {
 
-      }
     }
 
     result = (lenpass === count) ? true : false;
@@ -62,13 +45,8 @@ module.exports = function TimeCheck () {
       console.log("timingAttackChallenge solved")
       utils.solve(challenges.timingAttackChallenge)
     }
-
     res.json({ data: { result:result, time:endtime} })
 
-    }
-
-
-
-
+  }
   }
 }

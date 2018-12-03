@@ -8,18 +8,29 @@ const config = require('config')
 
 module.exports = function evaluate () {
 
+  let sanitization = function (txt) {
+     function escapeRegExp(string){
+      return string.replace(/[.*+?^${}|[\]\\]/g, '\\$&');
+    }
+    var out = txt;
+    if(txt.toLowerCase().includes("<script>") && txt.toLowerCase().includes("</script>")) {
+      out =  txt.toLowerCase().replace("<script>", "").replace("</script>", "");
+    }
+
+    return escapeRegExp(out)
+  }
+
   return (req, res, next) => {
 
     let tests = ["<script>(0)</script>", "<SCRIPT>(1)</SCRIPT>"]
 
-
     var strfunc = req.body.input;
-    //var strfunc = ("function myfunc(input) {" + req.body.input +"}");
     eval (strfunc)
 
     let results = [];
     for (var i in tests) {
       result = validateInput(tests[i]);
+      //console.log(tests[i] + ", -> " + result)
       if( !result.toLowerCase().includes("<script>") && !result.toLowerCase().includes("<\script>")) {
         if (result.toLowerCase() == ("("+i+")")) {
           results.push(true)

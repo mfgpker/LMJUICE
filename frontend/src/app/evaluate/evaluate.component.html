@@ -11,12 +11,15 @@
         The function you need to fix is validateInput. The function need to validate the input and return a safe input .
         <br>
         The requirement:<br>
-          1. The function must named validateInput<br>
+          1. The function must be named validateInput<br>
           2. It must return a XSS free input<br>
           <br>
         We will test the new better function with some known xss tricks.
 
+        <div>
+            <font size="2">Hint: We have made our own <em>sanitization</em> function, apply this to the input to avoid XSS attacks</font>
 
+        </div>
       </div>
 
       <mat-form-field>
@@ -25,7 +28,7 @@
           [formControl]="CodeControl"
           (focus)="this.error=null"
           matInput placeholder= "function validateInput(input) { return (input); }"
-           matInput value= "function validateInput(input) { <br>  return (input); } ">
+           matInput value= "function validateInput(input) {  return input; } ">
           </textarea>
         <mat-error *ngIf="CodeControl.invalid" >Please provide a password</mat-error>
       </mat-form-field>

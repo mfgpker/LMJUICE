@@ -58,7 +58,7 @@
   name: 'Password Strength'
   category: 'Broken Authentication'
   description: 'Log in with the administrator''s user credentials without previously changing them or applying SQL Injection.'
-  difficulty: 2
+  difficulty: 0
   hint: 'This one should be equally easy to a) brute force, b) crack the password hash or c) simply guess.'
   hintUrl: 'https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/broken-authentication.html#log-in-with-the-administrators-user-credentials-without-previously-changing-them-or-applying-sql-injection'
   key: weakPasswordChallenge
@@ -608,7 +608,7 @@
   hintUrl: ''
   key: cookieChallenge
 -
-  name: 'Password Strength'
+  name: 'Oversharing'
   category: 'Broken Authentication'
   description: 'Log in with the developer''s user credentials without previously changing them or applying SQL Injection.'
   difficulty: 0
