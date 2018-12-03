@@ -600,14 +600,6 @@
   hintUrl: 'https://www.owasp.org/images/a/a5/2018-02-05-AhmadAshraff.pdf'
   key: timingAttackChallenge
 -
-  name: 'Me want cookie!'
-  category: 'COOKIE!'
-  description: 'That do the cookie monster wants?'
-  difficulty: 0
-  hint: 'What cookies do you have?'
-  hintUrl: ''
-  key: cookieChallenge
--
   name: 'Oversharing'
   category: 'Broken Authentication'
   description: 'Log in with the developer''s user credentials without previously changing them or applying SQL Injection.'
