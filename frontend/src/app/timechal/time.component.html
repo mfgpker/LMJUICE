@@ -9,10 +9,12 @@
       <div class="error">{{error?.error}}</div>
 
       <div>
-        secret TIME CHALLA
+        What is the password. Notice how long it take for "a" and for "b". <br>
       </div>
+      <div color="green">{{time}}</div>
 
       <mat-form-field>
+
         <mat-label>Secret input</mat-label>
         <input id="geuss" #email name="geuss"
                [formControl]="GeussControl"

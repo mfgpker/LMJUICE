@@ -22,11 +22,12 @@ export class TimeComponent implements OnInit {
   public hide = true
   public data: any
   public error: any
+  public time : any
 
   constructor (private userService: UserService, private windowRefService: WindowRefService, private cookieService: CookieService, private router: Router) { }
 
   ngOnInit () {
-
+    this.time = ""
 
   }
 
@@ -40,7 +41,10 @@ export class TimeComponent implements OnInit {
 
     this.userService.TimeChal(this.data).subscribe((result: any) => {
       console.log(JSON.stringify(result));
-      alert(result.result)
+      //alert(result.data.result + ", it took to check: " + result.data.time/1000.0 + " seconds")
+
+      this.time = "It took " + result.data.time/1000.0 + " second for  \""+this.GeussControl.value+"\" "
+
     }, (error) => {
       console.log(error)
       this.error = error
