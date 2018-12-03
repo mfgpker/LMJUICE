@@ -110,8 +110,7 @@ export class NavbarComponent implements OnInit {
     console.log("cookie: " + this.cookieService.get("isadmin") )
 
     if(this.cookieService.get("isadmin") == undefined) {
-      let expireDate = new Date();
-      expireDate.setDate(expireDate.getHours() + 1);
+
       this.cookieService.put("isadmin", "false")
       console.log("cookie: " + this.cookieService.get("isadmin") )
     } else if (this.cookieService.get("isadmin") == "true") {

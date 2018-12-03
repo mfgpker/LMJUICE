@@ -596,8 +596,8 @@
   category: 'What is time'
   description: '<a href="/#/timechal"> Why is it so slow.  </a> Try different inputs and see how long it takes'
   difficulty: 0
-  hint: 'Why is it running so slow on some character and but not for others'
-  hintUrl: ''
+  hint: 'Why is it running so slow on some character and but not for others. The password is a fruit or a vegetable'
+  hintUrl: 'https://www.owasp.org/images/a/a5/2018-02-05-AhmadAshraff.pdf'
   key: timingAttackChallenge
 -
   name: 'Me want cookie!'
@@ -620,6 +620,6 @@
   category: 'XSS!'
   description: '<a href="/#/evaluate"> Fix validate function </a> from a XSS attack'
   difficulty: 0
-  hint: ''
+  hint: 'Write some javascript code that checking the input after xss attacl or html tags '
   hintUrl: ''
   key: validatebugfix
