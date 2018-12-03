@@ -2,7 +2,7 @@
   name: 'Score Board'
   category: 'Security through Obscurity'
   description: 'Find the carefully hidden ''Score Board'' page.'
-  difficulty: 1
+  difficulty: 0
   hint: 'Try to find a reference or clue behind the scenes. Or simply guess what URL the Score Board might have.'
   hintUrl: 'https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/score-board.html#find-the-carefully-hidden-score-board-page'
   key: scoreBoardChallenge
@@ -146,7 +146,7 @@
   name: 'Admin Section'
   category: 'Broken Access Control'
   description: 'Access the administration section of the store.'
-  difficulty: 1
+  difficulty: 0
   hint: 'It is just slightly harder to find than the score board link.'
   hintUrl: 'https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/broken-access-control.html#access-the-administration-section-of-the-store'
   key: adminSectionChallenge
@@ -617,7 +617,7 @@
   key: weakPasswordChallenge2
 -
   name: 'Fix a validate function'
-  category: 'validatebugfix!'
+  category: 'XSS!'
   description: '<a href="/#/evaluate"> Fix validate function </a> from a XSS attack'
   difficulty: 0
   hint: ''

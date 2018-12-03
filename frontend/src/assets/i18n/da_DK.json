@@ -86,6 +86,7 @@
   "LABEL_INVOICE": "Faktura",
   "TITLE_SCORE_BOARD": "Resultater",
   "LABEL_DIFFICULTY": "Sværhedsgrad",
+  "LABEL_0_STAR_DIFFICULTY": "Beginner",
   "LABEL_1_STAR_DIFFICULTY": "Trivial",
   "LABEL_2_STAR_DIFFICULTY": "Easy",
   "LABEL_3_STAR_DIFFICULTY": "Medium",
