@@ -59,7 +59,7 @@
   category: 'Broken Authentication'
   description: 'Log in with the administrator''s user credentials without previously changing them or applying SQL Injection.'
   difficulty: 0
-  hint: 'This one should be equally easy to a) brute force, b) crack the password hash or c) simply guess.'
+  hint: 'This one should be equally easy to a) brute force, b) crack the password hash or c) simply guess. They might have forgotten to change it.'
   hintUrl: 'https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/broken-authentication.html#log-in-with-the-administrators-user-credentials-without-previously-changing-them-or-applying-sql-injection'
   key: weakPasswordChallenge
 -
@@ -594,32 +594,32 @@
 -
   name: 'Timing Attack'
   category: 'What is time'
-  description: '<a href="/#/timechal"> Why is it so slow.  </a> Try different inputs and see how long it takes'
+  description: '<a href="/#/timechal"> Why is it so slow.  </a> Try different inputs and see how long it takes.'
   difficulty: 0
-  hint: 'Why is it running so slow on some character and but not for others. The password is a fruit or a vegetable'
+  hint: 'Why is it running so slow on some character and but not others? The password is a fruit or a vegetable'
   hintUrl: 'https://www.owasp.org/images/a/a5/2018-02-05-AhmadAshraff.pdf'
   key: timingAttackChallenge
--
-  name: 'Me want cookie!'
-  category: 'COOKIE!'
-  description: 'That do the cookie monster wants?'
-  difficulty: 0
-  hint: 'What cookies do you have?'
-  hintUrl: ''
-  key: cookieChallenge
+#-
+  #name: 'Me want cookie!'
+  #category: 'COOKIE!'
+  #description: 'That do the cookie monster wants?'
+  #difficulty: 0
+  #hint: 'What cookies do you have?'
+  #hintUrl: ''
+  #key: cookieChallenge
 -
   name: 'Oversharing'
   category: 'Broken Authentication'
   description: 'Log in with the developer''s user credentials without previously changing them or applying SQL Injection.'
   difficulty: 0
-  hint: 'He might have left a bit too much information in the About section, This one should be equally easy to brute force or simply guess.'
-  hintUrl: 'https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/broken-authentication.html#log-in-with-the-administrators-user-credentials-without-previously-changing-them-or-applying-sql-injection'
+  hint: 'It''s rumoured that he uses a weak password and he might have left a bit too much information in the About Us section. This one should be equally easy to brute force or simply guess.'
+  hintUrl: 'https://www.owasp.org/index.php/Authentication_Cheat_Sheet#Implement_Proper_Password_Strength_Controls'
   key: weakPasswordChallenge2
 -
-  name: 'Fix a validate function'
+  name: 'Fix the validate function'
   category: 'XSS!'
-  description: '<a href="/#/evaluate"> Fix validate function </a> from a XSS attack'
+  description: '<a href="/#/evaluate"> Fix the validate function </a> to prevent a XSS attack'
   difficulty: 0
-  hint: 'Write some javascript code that checking the input after xss attacl or html tags '
-  hintUrl: ''
+  hint: 'Write some javascript code that checks the input for a XSS attack or html tags'
+  hintUrl: 'https://www.w3schools.com/js/js_functions.asp'
   key: validatebugfix
