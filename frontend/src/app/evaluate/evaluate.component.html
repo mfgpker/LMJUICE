@@ -22,20 +22,20 @@
         </div>
       </div>
 
+
+      <!-- id="code" name="code" [formControl]="CodeControl"
+          (focus)="this.error=null">  -->
       <mat-form-field>
         <mat-label>validator</mat-label>
-        <textarea rows="4" cols="50" id="code" name="code"
-          [formControl]="CodeControl"
-          (focus)="this.error=null"
-          matInput placeholder= "function validateInput(input) { return (input); }"
-           matInput value= "function validateInput(input) {  return input; } ">
+        <textarea matInput id="code" [(ngModel)]='code' matTextareaAutosize matAutosizeMinRows=1 matAutosizeMaxRows=5>
+
           </textarea>
         <mat-error *ngIf="CodeControl.invalid" >Please provide a password</mat-error>
       </mat-form-field>
 
 
       <div class="button-container">
-        <button id="loginButton" [disabled]="!CodeControl.value" mat-raised-button
+        <button id="loginButton"  mat-raised-button
                 color="primary" (click)="submit()"><i class="fas fa-key fa-lg"></i> Submit
         </button>
 

@@ -25,6 +25,9 @@ module.exports = function evaluate () {
     let tests = ["<script>(0)</script>", "<SCRIPT>(1)</SCRIPT>"]
 
     var strfunc = req.body.input;
+    try {
+
+
     eval (strfunc)
 
     let results = [];
@@ -59,6 +62,9 @@ module.exports = function evaluate () {
 
     res.json({ data: {results} })
 
+    } catch(err) {
+      res.json({ data: {err} })
+    }
   }
 
 }

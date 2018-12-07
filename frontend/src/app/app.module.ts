@@ -37,6 +37,7 @@ import { ChallengeSolvedNotificationComponent } from './challenge-solved-notific
 import { OAuthComponent } from './oauth/oauth.component'
 import { TokenSaleComponent } from './token-sale/token-sale.component'
 import { ProductReviewEditComponent } from './product-review-edit/product-review-edit.component'
+import { FormsModule } from '@angular/forms';
 
 import { TimeComponent } from './timechal/time.component'
 import { EvaluateComponent } from './evaluate/evaluate.component'
@@ -118,6 +119,7 @@ export function HttpLoaderFactory (http: HttpClient) {
   ],
   entryComponents: [ProductDetailsComponent, QrCodeComponent, UserDetailsComponent, ProductReviewEditComponent],
   imports: [
+    FormsModule,
     BrowserModule,
     Routing,
     TranslateModule.forRoot(

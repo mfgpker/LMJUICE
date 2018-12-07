@@ -21,12 +21,13 @@ export class EvaluateComponent implements OnInit {
   public hide = true
   public data: any
   public error: any
+  public code: any
 
   constructor (private userService: UserService, private windowRefService: WindowRefService, private cookieService: CookieService, private router: Router) { }
 
   ngOnInit () {
-
-
+    this.code = "function validateInput(input) { \n // TODO: Write your code here \n     return input; \n\n}"
+   // this.CodeControl.setValue("function validateInput(input) {" + "\n" + "  return input; " + "\n" + "}")
   }
 
   submit () {
@@ -34,11 +35,17 @@ export class EvaluateComponent implements OnInit {
     this.data = {}
 
 
+
+    this.data.input = this.code;
+
     console.log(this.data)
 
-    this.data.input = this.CodeControl.value;
-    this.userService.evaluate(this.data).subscribe((result: any) => {
+    console.log(this.code)
 
+
+
+    this.userService.evaluate(this.data).subscribe((result: any) => {
+      console.log(JSON.stringify(result))
       console.log("tests:" + result.data.results);
 
       if (result.data.results.includes(false)) {
