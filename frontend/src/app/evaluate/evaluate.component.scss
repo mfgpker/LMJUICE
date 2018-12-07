@@ -22,10 +22,17 @@ a:nth-child(3) {
 
 mat-form-field {
   padding-top: 10px;
+
+}
+
+mat-form-field textarea {
+  background-color: #757575a8;
+  caret-color: white;
 }
 
 mat-form-field:nth-child(2) {
   padding-bottom: 20px;
+
 }
 
 .button-container {
