@@ -19,6 +19,8 @@ import { RouterModule, Routes, UrlMatchResult, UrlSegment } from '@angular/route
 import { TimeComponent } from './timechal/time.component'
 import { EvaluateComponent } from './evaluate/evaluate.component'
 
+import { extHintComponent } from './ext-hint/ext-hint.component'
+
 
 export function token1 (...args: number[]) {
   let L = Array.prototype.slice.call(args)
@@ -109,6 +111,10 @@ const routes: Routes = [
   {
     path: 'evaluate',
     component: EvaluateComponent
+  },
+  {
+    path: 'exthint',
+    component: extHintComponent
   },
   {
     path: '**',

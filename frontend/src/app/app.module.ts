@@ -41,6 +41,7 @@ import { FormsModule } from '@angular/forms';
 
 import { TimeComponent } from './timechal/time.component'
 import { EvaluateComponent } from './evaluate/evaluate.component'
+import { extHintComponent } from './ext-hint/ext-hint.component'
 
 /* Imported Services */
 import { RequestInterceptor } from './Services/request.interceptor'
@@ -115,7 +116,8 @@ export function HttpLoaderFactory (http: HttpClient) {
     TokenSaleComponent,
     ProductReviewEditComponent,
     TimeComponent,
-    EvaluateComponent
+    EvaluateComponent,
+    extHintComponent
   ],
   entryComponents: [ProductDetailsComponent, QrCodeComponent, UserDetailsComponent, ProductReviewEditComponent],
   imports: [
