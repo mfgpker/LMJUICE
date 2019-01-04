@@ -59,8 +59,8 @@
   category: 'Broken Authentication'
   description: 'Log in with the administrator''s user credentials without previously changing them or applying SQL Injection.'
   difficulty: 0
-  hint: 'This one should be equally easy to a) brute force, b) crack the password hash or c) simply guess.'
-  hintUrl: 'https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/broken-authentication.html#log-in-with-the-administrators-user-credentials-without-previously-changing-them-or-applying-sql-injection'
+  hint: 'This one should be equally easy to a) brute force, b) crack the password hash or c) simply guess. They might have forgotten to change it.'
+  hintUrl: './#/exthint#Pass_strength'
   key: weakPasswordChallenge
 -
   name: 'Five-Star Feedback'
@@ -148,7 +148,7 @@
   description: 'Access the administration section of the store.'
   difficulty: 0
   hint: 'It is just slightly harder to find than the score board link.'
-  hintUrl: 'https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/broken-access-control.html#access-the-administration-section-of-the-store'
+  hintUrl: './#/exthint#Admin_Section'
   key: adminSectionChallenge
 -
   name: 'Product Tampering'
@@ -562,7 +562,7 @@
   description: 'Like any review at least three times as the same user.'
   difficulty: 6
   hint: 'Punctuality is the politeness of kings.'
-  hintUrl: 'https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/race-condition.html#like-any-review-at-least-three-times-as-the-same-user'
+  hintUrl: './#/exthint#Timing'
   key: timingAttackChallenge
 -
   name: 'SSTi'
@@ -594,32 +594,32 @@
 -
   name: 'Timing Attack'
   category: 'What is time'
-  description: '<a href="/#/timechal"> Why is it so slow.  </a> Try different inputs and see how long it takes'
+  description: '<a href="/#/timechal"> Why is it so slow.  </a> Try different inputs and see how long it takes.'
   difficulty: 0
-  hint: 'Why is it running so slow on some character and but not for others. The password is a fruit or a vegetable'
-  hintUrl: 'https://www.owasp.org/images/a/a5/2018-02-05-AhmadAshraff.pdf'
+  hint: 'Why is it running so slow on some character and but not others? The password is a fruit or a vegetable'
+  hintUrl: './#/exthint'
   key: timingAttackChallenge
--
-  name: 'Me want cookie!'
-  category: 'COOKIE!'
-  description: 'That do the cookie monster wants?'
-  difficulty: 0
-  hint: 'What cookies do you have?'
-  hintUrl: ''
-  key: cookieChallenge
+#-
+  #name: 'Me want cookie!'
+  #category: 'COOKIE!'
+  #description: 'That do the cookie monster wants?'
+  #difficulty: 0
+  #hint: 'What cookies do you have?'
+  #hintUrl: ''
+  #key: cookieChallenge
 -
   name: 'Oversharing'
   category: 'Broken Authentication'
   description: 'Log in with the developer''s user credentials without previously changing them or applying SQL Injection.'
   difficulty: 0
-  hint: 'He might have left a bit too much information in the About section, This one should be equally easy to brute force or simply guess.'
-  hintUrl: 'https://bkimminich.gitbooks.io/pwning-owasp-juice-shop/content/part2/broken-authentication.html#log-in-with-the-administrators-user-credentials-without-previously-changing-them-or-applying-sql-injection'
+  hint: 'It''s rumoured that he uses a weak password and he might have left a bit too much information in the About Us section. This one should be equally easy to brute force or simply guess.'
+  hintUrl: './#/exthint#Oversharing'
   key: weakPasswordChallenge2
 -
-  name: 'Fix a validate function'
+  name: 'Fix the validate function'
   category: 'XSS!'
-  description: '<a href="/#/evaluate"> Fix validate function </a> from a XSS attack'
+  description: '<a href="/#/evaluate"> Fix the validate function </a> to prevent a XSS attack'
   difficulty: 0
-  hint: 'Write some javascript code that checking the input after xss attacl or html tags '
-  hintUrl: ''
+  hint: 'Write some javascript code that checks the input for a XSS attack or html tags'
+  hintUrl: './#/exthint#Evaluate_XSS'
   key: validatebugfix
