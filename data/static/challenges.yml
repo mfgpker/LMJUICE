@@ -597,7 +597,7 @@
   description: '<a href="/#/timechal"> Why is it so slow.  </a> Try different inputs and see how long it takes.'
   difficulty: 0
   hint: 'Why is it running so slow on some character and but not others? The password is a fruit or a vegetable'
-  hintUrl: 'https://www.owasp.org/images/a/a5/2018-02-05-AhmadAshraff.pdf'
+  hintUrl: './#/exthint'
   key: timingAttackChallenge
 #-
   #name: 'Me want cookie!'
